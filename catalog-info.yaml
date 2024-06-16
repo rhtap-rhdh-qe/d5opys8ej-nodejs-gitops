@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: d5opys8ej-nodejs-gitops
+  description: This is GitOps manifest for d5opys8ej-nodejs   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: d5opys8ej-nodejs
+    janus-idp.io/tekton: d5opys8ej-nodejs 
+    backstage.io/kubernetes-id: d5opys8ej-nodejs 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:d5opys8ej-nodejs
